@@ -30,12 +30,12 @@
 */
 
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self setNavigationBarHidden:YES];
 }
-*/
+
 
 
 /*
@@ -65,8 +65,7 @@
 
 - (IBAction) loadTabBar {
 	MyTabBarController *tabs = [[MyTabBarController alloc] initWithNibName:@"TabBar" bundle:nil];
-	[self.view addSubview:tabs.view];
-	
+	[self.navigationController pushViewController:tabs animated:NO];
 }
 
 @end
